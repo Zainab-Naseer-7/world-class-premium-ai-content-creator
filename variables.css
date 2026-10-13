@@ -1,0 +1,116 @@
+/* ==========================================================================
+   SYNTHORA AI - Design Tokens & Variables
+   Dark Mode (Default) & Light Mode System
+   ========================================================================== */
+
+:root {
+  /* --- Brand Identity Colors --- */
+  --primary-50: #f5f3ff;
+  --primary-100: #ede9fe;
+  --primary-200: #ddd6fe;
+  --primary-300: #c4b5fd;
+  --primary-400: #a78bfa;
+  --primary-500: #8b5cf6; /* Electric Violet */
+  --primary-600: #7c3aed;
+  --primary-700: #6d28d9;
+  --primary-800: #5b21b6;
+  --primary-900: #4c1d95;
+
+  --accent-cyan: #06b6d4;  /* Cyber Cyan */
+  --accent-cyan-light: #67e8f9;
+  --accent-blue: #3b82f6;  /* Electric Blue */
+  --accent-pink: #ec4899;  /* Radiant Magenta */
+  --accent-emerald: #10b981;/* Emerald Growth */
+  --accent-amber: #f59e0b; /* Warning/Usage Alert */
+  --accent-rose: #f43f5e;  /* Error/Delete */
+
+  /* --- Gradient Tokens --- */
+  --grad-primary: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #06b6d4 100%);
+  --grad-accent: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #3b82f6 100%);
+  --grad-subtle: linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.03) 100%);
+  --grad-card-border: linear-gradient(135deg, rgba(139, 92, 246, 0.4) 0%, rgba(6, 182, 212, 0.2) 50%, rgba(255, 255, 255, 0.05) 100%);
+  --grad-dark-surface: linear-gradient(180deg, rgba(20, 24, 36, 0.75) 0%, rgba(13, 16, 26, 0.85) 100%);
+  --grad-glow-orb-1: radial-gradient(circle at center, rgba(139, 92, 246, 0.28) 0%, rgba(139, 92, 246, 0) 70%);
+  --grad-glow-orb-2: radial-gradient(circle at center, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 70%);
+
+  /* --- Dark Mode Semantic Tokens (Default) --- */
+  --bg-app: #08090d;
+  --bg-surface: #0e111a;
+  --bg-surface-elevated: #141824;
+  --bg-surface-hover: #1b2030;
+  --bg-surface-glass: rgba(14, 17, 26, 0.72);
+  --bg-surface-glass-heavy: rgba(20, 24, 36, 0.88);
+  --bg-input: rgba(10, 13, 22, 0.85);
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --border-glow: rgba(139, 92, 246, 0.35);
+  --border-active: #8b5cf6;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-inverse: #08090d;
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px -6px rgba(0, 0, 0, 0.75);
+  --shadow-glow-primary: 0 0 30px -5px rgba(139, 92, 246, 0.45);
+  --shadow-glow-cyan: 0 0 30px -5px rgba(6, 182, 212, 0.4);
+
+  /* --- Typography --- */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+  /* --- Spacing & Layout --- */
+  --sidebar-width: 270px;
+  --sidebar-collapsed-width: 78px;
+  --topbar-height: 72px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --trans-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Glass blur */
+  --blur-glass: blur(16px);
+}
+
+/* --- Light Mode Semantic Overrides --- */
+[data-theme="light"] {
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f1f5f9;
+  --bg-surface-hover: #e2e8f0;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --bg-surface-glass-heavy: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-glass: rgba(15, 23, 42, 0.12);
+  --border-glow: rgba(139, 92, 246, 0.3);
+  --border-active: #7c3aed;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --text-inverse: #ffffff;
+
+  --grad-dark-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
+  --grad-card-border: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(6, 182, 212, 0.15) 50%, rgba(15, 23, 42, 0.05) 100%);
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 40px -6px rgba(15, 23, 42, 0.12);
+  --shadow-glow-primary: 0 0 30px -5px rgba(139, 92, 246, 0.25);
+  --shadow-glow-cyan: 0 0 30px -5px rgba(6, 182, 212, 0.2);
+}

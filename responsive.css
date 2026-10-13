@@ -1,0 +1,206 @@
+/* ==========================================================================
+   SYNTHORA AI - Responsive Design Styles
+   Breakpoints: Desktop (>1200px), Tablet (768-1199px), Mobile (<768px)
+   ========================================================================== */
+
+/* --- Tablet Breakpoint (max-width: 1199px) --- */
+@media (max-width: 1199px) {
+  :root {
+    --sidebar-width: 240px;
+  }
+
+  .ai-writer-grid {
+    grid-template-columns: 360px 1fr;
+    gap: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    gap: 1.25rem;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-4px);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand-col {
+    grid-column: span 3;
+  }
+
+  .seo-metrics-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seo-score-gauge {
+    grid-column: span 2;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 1rem;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile / Tablet Portrait Breakpoint (max-width: 900px) --- */
+@media (max-width: 900px) {
+  .app-sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .app-main {
+    margin-left: 0 !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .public-nav {
+    display: none;
+  }
+
+  .public-nav.mobile-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--topbar-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-surface-elevated);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .ai-writer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-preview-mockup {
+    display: none;
+  }
+
+  .preview-mockup-body {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-mock-sidebar {
+    display: none;
+  }
+
+  .floating-badge {
+    display: none;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Small Mobile Breakpoint (max-width: 640px) --- */
+@media (max-width: 640px) {
+  .dashboard-view-content {
+    padding: 1.25rem;
+  }
+
+  .dashboard-topbar {
+    padding: 0 1rem;
+  }
+
+  .quick-search-btn {
+    display: none;
+  }
+
+  .credit-meter {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .social-studio-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .editor-toolbar {
+    gap: 0.25rem;
+  }
+
+  .editor-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .analytics-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

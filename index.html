@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthora AI — Autonomous Content Creation Engine & Studio</title>
+  <meta name="description" content="Turn ideas into high-converting content that performs. The enterprise-grade AI writing studio for blogs, social campaigns, SEO blueprints, and ad copy.">
+  <meta name="keywords" content="AI content creator, AI writer, SEO generator, social media copy, blog writer, SaaS platform">
+  <meta name="theme-color" content="#08090D">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Synthora AI — Content Creation Platform">
+  <meta property="og:description" content="Synthesize high-converting copy in seconds with multi-persona neural models.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Design System & Stylesheets -->
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. PUBLIC MARKETING LANDING PAGE VIEW
+       ======================================================================== -->
+  <div id="publicLandingView">
+    
+    <!-- Navigation Header -->
+    <header class="public-header">
+      <div class="container">
+        <a href="#" class="brand-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          <div class="brand-logo-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="url(#brandGrad)" />
+              <path d="M16 6L24.6603 11V21L16 26L7.33975 21V11L16 6Z" stroke="#ffffff" stroke-width="1.75" stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="4" fill="#ffffff" />
+              <path d="M16 6V12M24.6603 21L19.5 18M7.33975 21L12.5 18" stroke="#ffffff" stroke-width="1.5" />
+              <defs>
+                <linearGradient id="brandGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8B5CF6"/>
+                  <stop offset="0.5" stop-color="#6366F1"/>
+                  <stop offset="1" stop-color="#06B6D4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span>Synthora<span class="gradient-text">.ai</span></span>
+        </a>
+
+        <nav class="public-nav">
+          <a href="#features" class="nav-link">Capabilities</a>
+          <a href="#demo" class="nav-link">Live Synthesis</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-icon" data-action="toggle-theme" title="Toggle Dark / Light Theme" aria-label="Toggle Theme">
+            🌓
+          </button>
+          <button class="btn btn-ghost btn-sm" onclick="ModalManager.open('loginModal')">
+            Sign In
+          </button>
+          <button class="btn btn-primary btn-sm" data-action="enter-studio" data-target-section="writer">
+            Launch Studio ✦
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Floating Badges & Interactive Window -->
+    <section class="hero-section">
+      <div class="container">
+        
+        <div class="hero-badge-wrapper">
+          <div class="hero-badge">
+            <span class="status-dot pulse"></span>
+            <span>NEXT-GEN AI CONTENT ENGINE v3.4</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Turn Ideas Into <span class="gradient-text">Content That Performs</span> At Enterprise Scale
+        </h1>
+
+        <p class="hero-description">
+          Synthesize high-converting blog posts, viral social campaigns, SEO blueprints, and persuasive marketing copy in seconds. Powered by multi-persona neural models.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-generate" data-action="enter-studio" data-target-section="writer">
+            Start Creating for Free ✦
+          </button>
+          <a href="#demo" class="btn btn-secondary">
+            Test Live Demo ↓
+          </a>
+        </div>
+
+        <!-- Interactive Hero Window Preview with Floating Cards -->
+        <div class="hero-preview-container">
+          
+          <!-- Floating Accents -->
+          <div class="floating-badge floating-badge-1">
+            <div class="floating-badge-icon" style="background: rgba(139, 92, 246, 0.2); color: #c4b5fd;">
+              ⚡
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 700; color: #ffffff;">10x Content Velocity</div>
+              <div style="font-size: 0.6875rem; color: var(--accent-emerald);">Growth rate: +340% mo/mo</div>
+            </div>
+          </div>
+
+          <div class="floating-badge floating-badge-2">
+            <div class="floating-badge-icon" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7;">
+              🎯
+            </div>
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 700; color: #ffffff;">98.4 SEO Readability</div>
+              <div style="font-size: 0.6875rem; color: var(--accent-cyan);">Top 1% SERP Ranking</div>
+            </div>
+          </div>
+
+          <!-- Hero Window -->
+          <div class="hero-preview-window">
+            <div class="preview-window-topbar">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="window-title">synthora-ai-studio • live workspace preview</div>
+              <div style="font-size: 0.75rem; color: var(--accent-emerald);">● Online 45.2ms</div>
+            </div>
+
+            <div class="preview-mockup-body">
+              <!-- Mock Sidebar -->
+              <div class="preview-mock-sidebar">
+                <span class="preview-pill">CHOOSE SCENARIO PRESET</span>
+                <div class="demo-preset-chips" style="margin-top: 0.75rem; flex-direction: column;">
+                  <button class="preset-chip active" data-topic="Autonomous AI Workflows for Modern Product Teams">🤖 AI Workflows</button>
+                  <button class="preset-chip" data-topic="How to Scale Organic Traffic from 0 to 100K in 6 Months">📈 Growth SEO</button>
+                  <button class="preset-chip" data-topic="Why Founders Must Build in Public on LinkedIn in 2026">💼 LinkedIn Authority</button>
+                  <button class="preset-chip" data-topic="The Next-Generation Paradigm of Creative Generative Tools">💡 Future of SaaS</button>
+                </div>
+              </div>
+
+              <!-- Mock Main -->
+              <div class="preview-mock-main">
+                <div style="display: flex; gap: 0.75rem;">
+                  <input type="text" id="demoInputTopic" class="input-field" value="Autonomous AI Workflows for Modern Product Teams" placeholder="Enter topic or prompt..." />
+                  <button id="demoGenerateBtn" class="btn btn-primary" style="flex-shrink: 0;">
+                    Generate Sample ✦
+                  </button>
+                </div>
+
+                <div id="demoOutputArea" class="preview-content-box">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                    <span class="badge badge-purple">High-Conversion Output</span>
+                    <span style="font-size: 0.75rem; color: var(--text-dim);">Ready to deploy</span>
+                  </div>
+                  <p style="color: var(--text-primary); font-size: 0.9375rem; line-height: 1.7; margin: 0;">
+                    Modern product teams aren't just adopting AI tools—they're re-architecting their entire delivery velocity. By orchestrating autonomous agents into daily sprints, top engineering squads compress three-week feature discovery cycles into 48-hour sprints. The leverage is no longer incremental; it is exponential.
+                  </p>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end;">
+                  <button id="demoOpenStudioBtn" class="btn btn-secondary btn-sm" style="display: none;">
+                    Open in Studio Canvas ↗
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trust & Metrics Section -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-value gradient-text">10M+</div>
+            <div class="metric-label">High-Impact Words Generated</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value gradient-text">45,000+</div>
+            <div class="metric-label">Creators & Marketing Teams</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value gradient-text">99.4%</div>
+            <div class="metric-label">Positive Organic SERP Indexing</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value gradient-text">4.9 / 5</div>
+            <div class="metric-label">Average User Rating Across 2.4K Reviews</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Grids Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">STATE-OF-THE-ART CAPABILITIES</div>
+          <h2 class="section-title">Built for Creators Who Demand Perfection</h2>
+          <p class="section-text" style="color: var(--text-secondary);">
+            Synthora combines advanced generative reasoning with granular editorial control, letting you produce publication-ready content with zero hallucinations.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">✍️</div>
+            <h3 class="feature-title">Multi-Modal AI Engine</h3>
+            <p class="feature-text">
+              Generate 9 distinct content formats: in-depth blog posts, social threads, email cadences, ad hooks, and video scripts crafted with domain precision.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🎭</div>
+            <h3 class="feature-title">10 Strategic Persona Tones</h3>
+            <p class="feature-text">
+              Instantly adapt your voice between Professional, Persuasive, Witty, Urgent, Academic, Storyteller, Bold, Luxury, and Technical tones.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🔍</div>
+            <h3 class="feature-title">Real-Time SEO Auditor</h3>
+            <p class="feature-text">
+              Live algorithmic scoring gauge calculates keyword density, search intent fulfillment, readability indexes, and heading hierarchy.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">📱</div>
+            <h3 class="feature-title">Native Social Mockups</h3>
+            <p class="feature-text">
+              Preview exactly how your posts render across LinkedIn, Instagram, X/Twitter, and YouTube before publishing to your audience.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">⚡</div>
+            <h3 class="feature-title">AI Fast-Action Refinement</h3>
+            <p class="feature-text">
+              Highlight sentences to polish grammar, condense into punchy soundbites, expand with supporting data, or formalize tone on the fly.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">💾</div>
+            <h3 class="feature-title">Vault & Instant Export</h3>
+            <p class="feature-text">
+              Every generation is version-controlled and searchable. Export effortlessly to formatted Markdown (.md), clean HTML, or plaintext (.txt).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Demo Callout Section -->
+    <section id="demo" class="interactive-demo-section" style="background: rgba(10, 13, 24, 0.5); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">EXPERIENCE THE FLOW</div>
+          <h2 class="section-title">Zero Prompt Engineering Required</h2>
+          <p style="color: var(--text-secondary);">
+            Select a target format, choose your tone, define your audience, and let Synthora's contextual orchestrator structure the optimal narrative.
+          </p>
+        </div>
+
+        <div class="demo-box">
+          <div class="demo-grid">
+            <div style="display: flex; flex-direction: column; justify-content: center; gap: 1.25rem;">
+              <span class="badge badge-cyan" style="width: fit-content;">SYNTHORA PRO WORKSPACE</span>
+              <h3 style="font-size: 1.75rem; line-height: 1.3;">Designed for Seamless Content Operations</h3>
+              <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7;">
+                Whether you are a solo founder growing an organic audience or an enterprise marketing team publishing dozens of weekly articles, Synthora provides the exact workflow tools you need.
+              </p>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.9375rem;">
+                <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-emerald);">✓</span> Full rich-text WYSIWYG editor with live word count & reading time</li>
+                <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-emerald);">✓</span> 18+ high-conversion frameworks across 9 content verticals</li>
+                <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-emerald);">✓</span> Cmd+K global search palette for rapid navigation</li>
+              </ul>
+              <div>
+                <button class="btn btn-primary" data-action="enter-studio" data-target-section="templates">
+                  Explore All 18+ Templates →
+                </button>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="demo-output-card" style="border-left: 4px solid var(--primary-500);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <span class="badge badge-purple">Social Post • LinkedIn</span>
+                  <span style="font-size: 0.75rem; color: var(--text-dim);">Viral Hook Architecture</span>
+                </div>
+                <h4 style="font-size: 1.0625rem; margin-bottom: 0.5rem;">Most SaaS teams spend 80% of their time building features nobody uses.</h4>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                  Here is the 3-step continuous feedback loop we used to discover which features actually retain enterprise buyers...
+                </p>
+              </div>
+
+              <div class="demo-output-card" style="border-left: 4px solid var(--accent-cyan);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <span class="badge badge-cyan">SEO Blueprint • Long-Form</span>
+                  <span style="font-size: 0.75rem; color: var(--text-dim);">Score 96/100</span>
+                </div>
+                <h4 style="font-size: 1.0625rem; margin-bottom: 0.5rem;">The 2026 Guide to AI Agent Deployment in Modern CI/CD</h4>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                  Structured with 4 primary H2 headings, targeted long-tail keywords, FAQ schema, and meta descriptions crafted to maximize click-through rate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">TRANSPARENT & SCALABLE</div>
+          <h2 class="section-title">Invest in High-Velocity Growth</h2>
+          <p style="color: var(--text-secondary);">Start free today. Upgrade when you need unlimited team scale and automated publishing.</p>
+        </div>
+
+        <!-- Billing Cycle Switcher -->
+        <div class="pricing-toggle-wrap">
+          <span id="labelMonthly" class="pricing-toggle-label active">Monthly Billing</span>
+          <div id="pricingSwitch" class="pricing-switch" role="button" aria-label="Toggle Monthly or Yearly Billing">
+            <div class="pricing-switch-thumb"></div>
+          </div>
+          <span id="labelYearly" class="pricing-toggle-label">
+            Yearly Billing <span class="badge badge-emerald" style="margin-left: 0.35rem;">Save 20%</span>
+          </span>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+          <!-- Starter Tier -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Starter Creator</h3>
+            <p class="plan-desc">For indie writers, creators, and professionals exploring AI writing power.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">0</span>
+              <span class="plan-period">/ forever</span>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> 10,000 generated words / month</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Access to all 10 tone personas</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Basic Social Media & Blog Studio</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Standard community support</li>
+            </ul>
+            <button class="btn btn-secondary" data-action="enter-studio" data-target-section="writer">
+              Get Started Free
+            </button>
+          </div>
+
+          <!-- Pro Tier (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3 class="plan-name">Pro Studio</h3>
+            <p class="plan-desc">For serious content marketers, agencies, and high-growth founders.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">$</span>
+              <span id="pricePro" class="plan-amount">29</span>
+              <span class="plan-period">/ month</span>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> 150,000 generated words / month</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Unlimited live SEO score audits</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Native multi-platform social previews</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Full 18+ high-conversion templates</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Priority AI response pipeline (under 1s)</li>
+            </ul>
+            <button class="btn btn-primary" data-action="enter-studio" data-target-section="writer">
+              Upgrade to Pro ✦
+            </button>
+          </div>
+
+          <!-- Business Tier -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Enterprise & Scale</h3>
+            <p class="plan-desc">For marketing teams, publishers, and agencies scaling content pipelines.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">$</span>
+              <span id="priceBusiness" class="plan-amount">79</span>
+              <span class="plan-period">/ month</span>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Unlimited words & team seats</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Custom brand voice fine-tuning</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Webhook API & CMS export integrations</li>
+              <li><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg> Dedicated account strategist & SLA</li>
+            </ul>
+            <button class="btn btn-secondary" data-action="enter-studio" data-target-section="writer">
+              Contact Enterprise
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">COMMON INQUIRIES</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p style="color: var(--text-secondary);">Everything you need to know about Synthora's neural engine and licensing.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>How does Synthora differ from generic AI chat models?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Generic chatbots generate generic, unformatted text without content strategy. Synthora incorporates multi-phase contextual orchestration: automated hook formulation, SEO keyword optimization, readability auditing, and native social previews specifically tailored for high organic engagement.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I own the full intellectual property rights to the generated content?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, 100%. All articles, social posts, emails, and ad copy generated through Synthora are your exclusive intellectual property. You can publish, monetize, copyright, or repurpose them with complete freedom.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the live SEO score gauge work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Our real-time SEO scoring algorithm analyzes keyword integration across your titles, subheadings, and body paragraphs. It audits keyword density to prevent over-optimization, verifies semantic readability, and ensures clean heading hierarchy for maximum search engine performance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I export directly to WordPress, Notion, or Ghost?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! You can copy rich-text directly, download formatted Markdown (.md) for seamless import into modern static-site engines, or export clean semantic HTML.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What happens if I exhaust my monthly word credits?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              You can instantly add credit top-ups from your dashboard or seamlessly upgrade your tier without losing any saved drafts, templates, or historical analytics.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Call-To-Action Banner -->
+    <section style="padding: 5rem 0; position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(8,9,13,0.5) 0%, rgba(139,92,246,0.15) 100%);">
+      <div class="container" style="text-align: center;">
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">
+          Ready to Supercharge Your <span class="gradient-text">Content Velocity?</span>
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 2.5rem; font-size: 1.125rem;">
+          Join 45,000+ top creators, growth marketers, and modern founders synthesizing high-impact content every single day.
+        </p>
+        <button class="btn btn-generate btn-lg" data-action="enter-studio" data-target-section="writer">
+          Launch Synthora Studio Free ✦
+        </button>
+      </div>
+    </section>
+
+    <!-- Public Footer -->
+    <footer class="public-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <a href="#" class="brand-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+              <div class="brand-logo-icon">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="32" height="32" rx="8" fill="url(#footerGrad)" />
+                  <path d="M16 6L24.6603 11V21L16 26L7.33975 21V11L16 6Z" stroke="#ffffff" stroke-width="1.75" stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="4" fill="#ffffff" />
+                  <defs>
+                    <linearGradient id="footerGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#8B5CF6"/>
+                      <stop offset="1" stop-color="#06B6D4"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <span>Synthora<span class="gradient-text">.ai</span></span>
+            </a>
+            <p style="color: var(--text-muted);">
+              Enterprise-grade generative content infrastructure for modern creative teams. Turn ideas into content that performs.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Studios</h4>
+            <ul class="footer-links">
+              <li><a href="#" data-action="enter-studio" data-target-section="writer">AI Writer Studio</a></li>
+              <li><a href="#" data-action="enter-studio" data-target-section="social">Social Media Studio</a></li>
+              <li><a href="#" data-action="enter-studio" data-target-section="seo">Blog & SEO Studio</a></li>
+              <li><a href="#" data-action="enter-studio" data-target-section="templates">Template Library</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Capabilities</h4>
+            <ul class="footer-links">
+              <li><a href="#features">10 Persona Tones</a></li>
+              <li><a href="#features">Real-Time SEO Gauge</a></li>
+              <li><a href="#features">Multi-Format Engine</a></li>
+              <li><a href="#features">Content Vault</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#pricing">Pricing Plans</a></li>
+              <li><a href="#faq">Frequently Asked</a></li>
+              <li><a href="#" onclick="Toast.info('API Documentation is available in Enterprise tier.'); return false;">API Documentation</a></li>
+              <li><a href="#" onclick="Toast.info('System status: 99.99% operational'); return false;">System Status</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#" onclick="Toast.info('Privacy Policy details: Synthora never trains models on your private data.'); return false;">Privacy Policy</a></li>
+              <li><a href="#" onclick="Toast.info('Terms of Service: Full commercial ownership granted to users.'); return false;">Terms of Service</a></li>
+              <li><a href="#" onclick="Toast.info('Security: 256-bit AES encryption at rest.'); return false;">Security & Compliance</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Synthora AI Technologies Inc. All rights reserved.</div>
+          <div class="footer-socials">
+            <a href="#" title="X / Twitter">𝕏</a>
+            <a href="#" title="LinkedIn">in</a>
+            <a href="#" title="GitHub">⚡</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================================================
+       2. AUTHENTICATED AI WORKSPACE STUDIO VIEW
+       ======================================================================== -->
+  <div id="appStudioView" class="app-layout" style="display: none;">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="appSidebar" class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="#" class="brand-logo" onclick="App.navigateTo('writer'); return false;">
+          <div class="brand-logo-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="url(#sideGrad)" />
+              <path d="M16 6L24.6603 11V21L16 26L7.33975 21V11L16 6Z" stroke="#ffffff" stroke-width="1.75" stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="4" fill="#ffffff" />
+              <defs>
+                <linearGradient id="sideGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8B5CF6"/>
+                  <stop offset="1" stop-color="#06B6D4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span>Synthora<span class="gradient-text">.ai</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-scroll">
+        <div>
+          <div class="sidebar-section-title">CREATION STUDIOS</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="#" class="sidebar-link active" data-section="writer">
+                <span class="sidebar-link-icon">✍️</span>
+                <span>AI Writer Studio</span>
+                <span class="sidebar-badge">CORE</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-section="social">
+                <span class="sidebar-link-icon">📱</span>
+                <span>Social Studio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-section="seo">
+                <span class="sidebar-link-icon">🔍</span>
+                <span>Blog & SEO Studio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-section="templates">
+                <span class="sidebar-link-icon">⚡</span>
+                <span>Template Library</span>
+                <span class="sidebar-badge">18+</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">WORKSPACE & VAULT</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="#" class="sidebar-link" data-section="history">
+                <span class="sidebar-link-icon">📂</span>
+                <span>Content Vault</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sidebar-link" data-section="analytics">
+                <span class="sidebar-link-icon">📊</span>
+                <span>Generation Analytics</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="sidebar-section-title">PREFERENCES</div>
+          <ul class="sidebar-menu">
+            <li>
+              <a href="#" class="sidebar-link" data-section="settings">
+                <span class="sidebar-link-icon">⚙️</span>
+                <span>Studio Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- User Profile & Landing Exit -->
+      <div class="sidebar-footer">
+        <div class="user-profile-widget" onclick="App.navigateTo('settings')">
+          <div class="user-avatar">A</div>
+          <div class="user-meta">
+            <div class="user-name">Asfandyar</div>
+            <div class="user-tier">PRO CREATOR</div>
+          </div>
+        </div>
+        <button id="btnExitToLanding" class="btn btn-ghost btn-sm" style="width: 100%; margin-top: 0.5rem; justify-content: flex-start;">
+          ← Return to Public Site
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Studio App Area -->
+    <div class="app-main">
+      
+      <!-- Studio Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button id="mobileSidebarToggle" class="btn-icon mobile-menu-toggle" aria-label="Toggle Navigation Drawer">
+            ☰
+          </button>
+          
+          <div class="quick-search-btn" onclick="ModalManager.open('quickSearchModal')">
+            <span>🔍</span>
+            <span>Search studios, templates...</span>
+            <span class="search-kbd">⌘K</span>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Credit Meter -->
+          <div class="credit-meter">
+            <span class="credit-label">Words Left:</span>
+            <span id="topbarCreditCount" class="credit-count">88,240 / 100,000</span>
+            <div class="credit-bar-wrap">
+              <div id="topbarCreditBar" class="credit-bar-fill"></div>
+            </div>
+          </div>
+
+          <button class="btn-icon" data-action="toggle-theme" title="Toggle Theme" aria-label="Toggle Theme">
+            🌓
+          </button>
+
+          <button class="btn btn-primary btn-sm" onclick="App.navigateTo('writer'); Toast.info('New generation canvas ready.');">
+            + New Document
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Studio Views Container -->
+      <div class="dashboard-view-content">
+        
+        <!-- PANE 1: AI WRITER STUDIO (CORE) -->
+        <div id="pane-writer" class="studio-pane">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>AI Writer Studio</h2>
+              <p>Universal multi-modal content synthesizer with granular tone and editorial control.</p>
+            </div>
+          </div>
+
+          <div class="ai-writer-grid">
+            <!-- Left Controls Card -->
+            <div class="writer-controls-card">
+              <h3><span>✦</span> Generation Parameters</h3>
+
+              <div class="form-group">
+                <label for="writerTopicInput" class="form-label">
+                  <span>What do you want to create? *</span>
+                </label>
+                <textarea id="writerTopicInput" class="textarea-field" placeholder="E.g. Why developer experience is the ultimate competitive moat for B2B SaaS companies..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="writerContentType" class="form-label">Content Format</label>
+                <select id="writerContentType" class="select-field">
+                  <option value="Blog Post">Blog Post (Comprehensive Outline & Sections)</option>
+                  <option value="Social Post">Social Post (High-Engagement Copy)</option>
+                  <option value="SEO Article">SEO Article (Keyword-Ranked Blueprint)</option>
+                  <option value="Email Newsletter">Email Newsletter (High Open-Rate Broadcast)</option>
+                  <option value="Ad Copy">Ad Copy (High-Conversion Hook & CTA)</option>
+                  <option value="YouTube Script">YouTube Script (Engaging Video Narrative)</option>
+                  <option value="Product Description">Product Description (Benefits & Value)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Voice & Tone Persona</label>
+                <div class="tone-selector-pills">
+                  <button class="tone-pill active" data-tone="Professional">Professional</button>
+                  <button class="tone-pill" data-tone="Persuasive">Persuasive</button>
+                  <button class="tone-pill" data-tone="Friendly">Friendly</button>
+                  <button class="tone-pill" data-tone="Urgent">Urgent</button>
+                  <button class="tone-pill" data-tone="Witty">Witty</button>
+                  <button class="tone-pill" data-tone="Informative">Informative</button>
+                  <button class="tone-pill" data-tone="Storyteller">Storyteller</button>
+                  <button class="tone-pill" data-tone="Bold">Bold</button>
+                  <button class="tone-pill" data-tone="Luxury">Luxury</button>
+                  <button class="tone-pill" data-tone="Technical">Technical</button>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label for="writerLanguage" class="form-label">Language</label>
+                  <select id="writerLanguage" class="select-field">
+                    <option value="English">English (US)</option>
+                    <option value="English (UK)">English (UK)</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Japanese">Japanese</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="writerLength" class="form-label">Output Length</label>
+                  <select id="writerLength" class="select-field">
+                    <option value="Short">Short (~250 words)</option>
+                    <option value="Medium" selected>Medium (~600 words)</option>
+                    <option value="Long">Long (~1,200 words)</option>
+                    <option value="Deep-Dive">Deep-Dive (~2,000 words)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="writerAudience" class="form-label">Target Audience</label>
+                <input type="text" id="writerAudience" class="input-field" placeholder="E.g. Founders, CTOs, Marketing Managers" value="Growth Marketers & Founders" />
+              </div>
+
+              <div class="form-group">
+                <label for="writerKeywords" class="form-label">Keywords (Comma separated)</label>
+                <input type="text" id="writerKeywords" class="input-field" placeholder="E.g. DX, developer tools, retention, engineering" />
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label for="writerVariations" class="form-label">Variations</label>
+                  <select id="writerVariations" class="select-field">
+                    <option value="1">1 Variation</option>
+                    <option value="2">2 Variations</option>
+                    <option value="3">3 Variations</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="writerCreativity" class="form-label">
+                    <span>Creativity</span>
+                    <span id="creativityVal" class="slider-val-badge">0.7</span>
+                  </label>
+                  <div class="slider-control-wrap" style="height: 42px;">
+                    <input type="range" id="writerCreativity" class="range-slider" min="0.1" max="1.0" step="0.1" value="0.7" />
+                  </div>
+                </div>
+              </div>
+
+              <button id="btnGenerateContent" class="btn btn-generate" style="width: 100%; margin-top: 1rem;">
+                Generate Content ✦
+              </button>
+
+              <div id="aiStatusIndicator" class="ai-status-indicator">
+                <span class="spinner-icon"></span>
+                <span id="aiStatusText">Synthesizing narrative with neural engine...</span>
+              </div>
+            </div>
+
+            <!-- Right Rich Editor Card -->
+            <div class="editor-container">
+              <!-- Toolbar -->
+              <div class="editor-toolbar">
+                <div class="toolbar-group">
+                  <button class="toolbar-btn" data-edit-cmd="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+                  <button class="toolbar-btn" data-edit-cmd="italic" title="Italic (Ctrl+I)"><i>I</i></button>
+                  <button class="toolbar-btn" data-edit-cmd="underline" title="Underline (Ctrl+U)"><u>U</u></button>
+                  <button class="toolbar-btn" data-edit-cmd="strikeThrough" title="Strikethrough"><s>S</s></button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-edit-cmd="formatBlock" data-edit-val="h1" title="Heading 1">H1</button>
+                  <button class="toolbar-btn" data-edit-cmd="formatBlock" data-edit-val="h2" title="Heading 2">H2</button>
+                  <button class="toolbar-btn" data-edit-cmd="formatBlock" data-edit-val="p" title="Paragraph">¶</button>
+                  <div class="toolbar-divider"></div>
+                  <button class="toolbar-btn" data-edit-cmd="insertUnorderedList" title="Bullet List">•≡</button>
+                  <button class="toolbar-btn" data-edit-cmd="insertOrderedList" title="Numbered List">1≡</button>
+                  <button class="toolbar-btn" data-edit-cmd="formatBlock" data-edit-val="blockquote" title="Quote">“</button>
+                </div>
+
+                <div class="toolbar-group">
+                  <button class="btn btn-ghost btn-sm" onclick="EditorComponent.copyToClipboard()" title="Copy to Clipboard">
+                    📋 Copy
+                  </button>
+                  <button class="btn btn-ghost btn-sm" onclick="EditorComponent.download('markdown')" title="Export as Markdown">
+                    📥 .MD
+                  </button>
+                  <button class="btn btn-ghost btn-sm" onclick="EditorComponent.download('txt')" title="Export Plaintext">
+                    📥 .TXT
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="EditorComponent.saveToHistory()" title="Save to Content Vault">
+                    💾 Save Draft
+                  </button>
+                </div>
+              </div>
+
+              <!-- AI Assistant Fast-Action Chips -->
+              <div class="ai-actions-bar">
+                <span style="font-size: 0.75rem; color: var(--text-dim); margin-right: 0.25rem;">QUICK AI REFINE:</span>
+                <button class="ai-action-chip" onclick="EditorComponent.improve()">
+                  <span>✨ Improve Flow & Impact</span>
+                </button>
+                <button class="ai-action-chip" onclick="EditorComponent.shorten()">
+                  <span>✂️ Make Punchy / Shorten</span>
+                </button>
+                <button class="ai-action-chip" onclick="EditorComponent.expand()">
+                  <span>📈 Expand Strategic Analysis</span>
+                </button>
+              </div>
+
+              <!-- Contenteditable Canvas -->
+              <div id="aiEditorCanvas" class="editor-canvas" contenteditable="true" spellcheck="false">
+                <h1>Welcome to Synthora AI Writer Studio</h1>
+                <p>Configure your prompt in the parameters panel on the left, then click <strong>Generate Content ✦</strong> to stream high-conversion copy directly into this canvas.</p>
+                <p>You can freely edit, format, run AI transformations, or export to your favorite toolchain at any point.</p>
+              </div>
+
+              <!-- Editor Footer Metrics -->
+              <div class="editor-footer">
+                <div class="editor-stats">
+                  <span id="editorWordCount">43 words</span>
+                  <span>•</span>
+                  <span id="editorCharCount">298 chars</span>
+                  <span>•</span>
+                  <span id="editorReadingTime">1 min read</span>
+                </div>
+                <div style="font-size: 0.75rem; color: var(--accent-emerald);">
+                  ✓ Auto-saved to local memory
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 2: SOCIAL MEDIA STUDIO -->
+        <div id="pane-social" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>Social Media Studio</h2>
+              <p>Platform-tuned viral posts, threads, and captions rendered in native visual cards.</p>
+            </div>
+          </div>
+
+          <div class="social-studio-tabs">
+            <button class="social-tab active" data-platform="instagram">📷 Instagram</button>
+            <button class="social-tab" data-platform="linkedin">💼 LinkedIn</button>
+            <button class="social-tab" data-platform="x">𝕏 X (Twitter)</button>
+            <button class="social-tab" data-platform="youtube">▶️ YouTube</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 380px 1fr; gap: 2rem; align-items: start;">
+            <!-- Social Form Controls -->
+            <div class="writer-controls-card">
+              <h3><span>📱</span> Social Post Settings</h3>
+              
+              <div class="form-group">
+                <label for="socialTopicInput" class="form-label">Post Topic or Core Concept</label>
+                <textarea id="socialTopicInput" class="textarea-field" placeholder="E.g. Announcing our seed funding round and lessons learned while building in public..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="socialToneSelect" class="form-label">Voice Tone</label>
+                <select id="socialToneSelect" class="select-field">
+                  <option value="Persuasive">Persuasive (High Conversion)</option>
+                  <option value="Professional">Professional (Thought Leadership)</option>
+                  <option value="Witty">Witty (Engaging & Lighthearted)</option>
+                  <option value="Storyteller">Storyteller (Personal Narrative)</option>
+                  <option value="Bold">Bold (Contrarian & Direct)</option>
+                </select>
+              </div>
+
+              <button id="btnGenSocial" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                Generate Social Post ✦
+              </button>
+            </div>
+
+            <!-- Native Social Mockup Preview Card -->
+            <div class="social-preview-card">
+              <div class="social-header-row">
+                <div class="social-avatar">S</div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Synthora Official</div>
+                  <div id="socialPlatformHandle" class="social-handle">@synthora.official</div>
+                </div>
+                <span id="socialPlatformBadge" class="badge badge-purple" style="margin-left: auto;">INSTAGRAM</span>
+              </div>
+
+              <div class="social-mock-image">
+                <span>[ Dynamic Generated Media Preview ]</span>
+              </div>
+
+              <div id="socialPostTextPreview" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-primary); margin-bottom: 1.5rem;">
+                <p>Stop trading hours for incremental output. The future of creative leverage belongs to creators who orchestrate AI systems rather than writing every sentence manually.</p>
+                <p>#Productivity #AIWorkflow #CreatorEconomy #SaaSGrowth</p>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 1rem; color: var(--text-dim); font-size: 0.8125rem;">
+                <span>❤️ 2.4k Likes</span>
+                <span>💬 148 Comments</span>
+                <span>↗ 412 Shares</span>
+                <span>🔖 892 Saves</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: BLOG & SEO STUDIO -->
+        <div id="pane-seo" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>Blog & SEO Studio</h2>
+              <p>Engineer high-ranking search blueprints with real-time keyword density and readability audits.</p>
+            </div>
+          </div>
+
+          <!-- Real-Time SEO Metrics Gauge Bar -->
+          <div class="seo-metrics-bar">
+            <div class="seo-score-gauge">
+              <div id="seoScoreValue" class="score-circle">94</div>
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-primary);">SEO HEALTH SCORE</div>
+              <div style="font-size: 0.6875rem; color: var(--accent-emerald);">Optimal Search Indexability</div>
+            </div>
+
+            <div>
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-dim); margin-bottom: 0.75rem;">KEYWORD INTEGRATION AUDIT</div>
+              <ul id="seoChecklistContainer" class="seo-checklist">
+                <li class="seo-checklist-item check-pass"><span>✓</span><span>Primary keyword present in Title and H1 tag</span></li>
+                <li class="seo-checklist-item check-pass"><span>✓</span><span>Semantic subheadings (H2, H3) structured cleanly</span></li>
+                <li class="seo-checklist-item check-pass"><span>✓</span><span>Optimal keyword density maintained between 1.2% - 2.5%</span></li>
+                <li class="seo-checklist-item check-pass"><span>✓</span><span>Flesch-Kincaid readability score exceeds 65.0</span></li>
+              </ul>
+            </div>
+
+            <div style="border-left: 1px solid var(--border-subtle); padding-left: 1.5rem;">
+              <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-dim); margin-bottom: 0.75rem;">OPTIMIZATION ACTIONS</div>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
+                Blueprints automatically generate Meta Titles, Meta Descriptions, and rich FAQ schema markup ready for search spiders.
+              </p>
+              <button class="btn btn-secondary btn-sm" onclick="EditorComponent.copyToClipboard()">
+                Copy Full Schema 📋
+              </button>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 380px 1fr; gap: 2rem; align-items: start;">
+            <div class="writer-controls-card">
+              <h3><span>🔍</span> SEO Blueprint Inputs</h3>
+              
+              <div class="form-group">
+                <label for="seoTopicInput" class="form-label">Article Focus Topic</label>
+                <input type="text" id="seoTopicInput" class="input-field" value="Next-Gen Autonomous AI Agents for Enterprise Sprints" />
+              </div>
+
+              <div class="form-group">
+                <label for="seoKeywordsInput" class="form-label">Target Keywords (Comma Separated)</label>
+                <textarea id="seoKeywordsInput" class="textarea-field" style="min-height: 80px;">AI agents, workflow automation, LLM orchestration, sprint velocity</textarea>
+              </div>
+
+              <button id="btnGenSeo" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                Generate SEO Blueprint ✦
+              </button>
+            </div>
+
+            <div class="preview-content-box" style="min-height: 480px; padding: 2rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+                <span class="badge badge-emerald">Engineered for SERP #1</span>
+                <span style="font-size: 0.8125rem; color: var(--text-dim);">Live Output Stream</span>
+              </div>
+              <div id="seoOutputPreview" style="line-height: 1.8;">
+                <h2>Comprehensive Enterprise Guide: Next-Gen Autonomous AI Agents</h2>
+                <p><strong>Meta Title:</strong> Autonomous AI Agents for Enterprise Teams (2026 Guide)</p>
+                <p><strong>Meta Description:</strong> Discover how modern software squads leverage autonomous agent orchestration to accelerate development cycles and reduce sprint overhead.</p>
+                <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 1.25rem 0;" />
+                <h3>1. The Evolution of LLM Orchestration in Agile Environments</h3>
+                <p>Deploying standalone prompts is no longer competitive. Engineering leaders require autonomous agent frameworks capable of recursive code synthesis and regression testing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 4: TEMPLATES LIBRARY -->
+        <div id="pane-templates" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>High-Conversion Template Library</h2>
+              <p>Explore 18+ battle-tested frameworks created by veteran growth marketers and copywriters.</p>
+            </div>
+            <div>
+              <input type="text" id="templateSearchInput" class="input-field" style="width: 280px;" placeholder="Filter templates by keyword..." />
+            </div>
+          </div>
+
+          <!-- Category Tabs -->
+          <div class="templates-category-tabs">
+            <button class="category-pill active" data-cat="all" onclick="App.filterTemplateCategory('all', this)">All Templates (18)</button>
+            <button class="category-pill" data-cat="blog" onclick="App.filterTemplateCategory('blog', this)">Blog & Articles</button>
+            <button class="category-pill" data-cat="social" onclick="App.filterTemplateCategory('social', this)">Social Media</button>
+            <button class="category-pill" data-cat="marketing" onclick="App.filterTemplateCategory('marketing', this)">Marketing & Ads</button>
+            <button class="category-pill" data-cat="video" onclick="App.filterTemplateCategory('video', this)">Video & YouTube</button>
+            <button class="category-pill" data-cat="email" onclick="App.filterTemplateCategory('email', this)">Email Cadences</button>
+          </div>
+
+          <!-- Dynamic Grid of Templates -->
+          <div id="templatesGrid" class="templates-grid"></div>
+        </div>
+
+        <!-- PANE 5: CONTENT VAULT & HISTORY -->
+        <div id="pane-history" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>Content Vault & History</h2>
+              <p>Every generated piece of content is indexed, searchable, and one-click editable.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="App.navigateTo('writer')">
+              + Generate New Content
+            </button>
+          </div>
+
+          <div class="history-filter-row">
+            <input type="text" id="historySearchInput" class="input-field" style="max-width: 320px;" placeholder="Search saved content..." />
+            
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 0.8125rem; color: var(--text-muted);">Filter by type:</span>
+              <select id="historyFilterType" class="select-field" style="width: 180px;">
+                <option value="all">All Formats</option>
+                <option value="Blog Post">Blog Posts</option>
+                <option value="Social Post">Social Posts</option>
+                <option value="SEO Article">SEO Articles</option>
+                <option value="Email Newsletter">Email Newsletters</option>
+                <option value="Ad Copy">Ad Copy</option>
+                <option value="YouTube Script">YouTube Scripts</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table Container -->
+          <div class="history-table-container">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th style="width: 40px;">★</th>
+                  <th>Title / Concept</th>
+                  <th>Format</th>
+                  <th>Platform</th>
+                  <th>Words</th>
+                  <th style="width: 130px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANE 6: GENERATION ANALYTICS -->
+        <div id="pane-analytics" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>Generation Analytics</h2>
+              <p>Track your content velocity, output volume, and credit allocation across projects.</p>
+            </div>
+          </div>
+
+          <div class="analytics-metrics-grid">
+            <div class="stat-card">
+              <span class="stat-card-title">TOTAL WORDS GENERATED</span>
+              <span id="statTotalWords" class="stat-card-value gradient-text">24,850</span>
+              <span class="stat-card-trend">↑ 18.4% this week</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-card-title">TOTAL GENERATIONS</span>
+              <span id="statTotalGens" class="stat-card-value">48</span>
+              <span class="stat-card-trend">↑ 12 new items today</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-card-title">CREDITS USED</span>
+              <span id="statCreditsUsed" class="stat-card-value">11,760 / 100,000</span>
+              <span style="font-size: 0.75rem; color: var(--text-dim);">88% monthly capacity remaining</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-card-title">AVG. READABILITY SCORE</span>
+              <span class="stat-card-value" style="color: var(--accent-emerald);">94.8</span>
+              <span class="stat-card-trend">Top 2% grade efficiency</span>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <!-- Weekly Production Velocity Chart (SVG) -->
+            <div class="chart-card">
+              <h3 class="chart-card-title">Weekly Word Output Velocity</h3>
+              <div style="height: 220px; width: 100%;">
+                <svg viewBox="0 0 500 200" style="width: 100%; height: 100%; overflow: visible;">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Grid lines -->
+                  <line x1="0" y1="50" x2="500" y2="50" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+                  <line x1="0" y1="100" x2="500" y2="100" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+                  <line x1="0" y1="150" x2="500" y2="150" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4"/>
+                  
+                  <!-- Area Fill -->
+                  <polygon points="20,160 80,130 140,140 200,90 260,110 320,60 380,80 440,40 480,20 480,180 20,180" fill="url(#chartGrad)" />
+                  <!-- Polyline -->
+                  <polyline points="20,160 80,130 140,140 200,90 260,110 320,60 380,80 440,40 480,20" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                  
+                  <!-- Circles on points -->
+                  <circle cx="20" cy="160" r="4" fill="#67e8f9" />
+                  <circle cx="80" cy="130" r="4" fill="#67e8f9" />
+                  <circle cx="140" cy="140" r="4" fill="#67e8f9" />
+                  <circle cx="200" cy="90" r="4" fill="#67e8f9" />
+                  <circle cx="260" cy="110" r="4" fill="#67e8f9" />
+                  <circle cx="320" cy="60" r="4" fill="#67e8f9" />
+                  <circle cx="380" cy="80" r="4" fill="#67e8f9" />
+                  <circle cx="440" cy="40" r="4" fill="#67e8f9" />
+                  <circle cx="480" cy="20" r="5" fill="#ffffff" stroke="#8B5CF6" stroke-width="2" />
+                </svg>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-dim); margin-top: 0.5rem;">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+            </div>
+
+            <!-- Content Vertical Distribution -->
+            <div class="chart-card">
+              <h3 class="chart-card-title">Content Format Distribution</h3>
+              <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+                    <span>Blog & Long-Form Articles</span>
+                    <span style="font-weight: 700; color: var(--primary-400);">45%</span>
+                  </div>
+                  <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: var(--radius-full); overflow: hidden;">
+                    <div style="width: 45%; height: 100%; background: var(--primary-500);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+                    <span>Social Media Posts</span>
+                    <span style="font-weight: 700; color: var(--accent-cyan);">30%</span>
+                  </div>
+                  <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: var(--radius-full); overflow: hidden;">
+                    <div style="width: 30%; height: 100%; background: var(--accent-cyan);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+                    <span>SEO Blueprints</span>
+                    <span style="font-weight: 700; color: var(--accent-emerald);">15%</span>
+                  </div>
+                  <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: var(--radius-full); overflow: hidden;">
+                    <div style="width: 15%; height: 100%; background: var(--accent-emerald);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.35rem;">
+                    <span>Marketing & Ad Copy</span>
+                    <span style="font-weight: 700; color: var(--accent-magenta);">10%</span>
+                  </div>
+                  <div style="height: 6px; background: rgba(255,255,255,0.08); border-radius: var(--radius-full); overflow: hidden;">
+                    <div style="width: 10%; height: 100%; background: var(--accent-magenta);"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 7: STUDIO SETTINGS -->
+        <div id="pane-settings" class="studio-pane" style="display: none;">
+          <div class="view-header">
+            <div class="view-title-group">
+              <h2>Studio Settings & Preferences</h2>
+              <p>Configure model temperature, default voice personas, and local storage state.</p>
+            </div>
+          </div>
+
+          <div style="max-width: 680px; display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="writer-controls-card">
+              <h3><span>⚙️</span> General Studio Preferences</h3>
+              
+              <div class="form-group">
+                <label for="settingsName" class="form-label">Creator Display Name</label>
+                <input type="text" id="settingsName" class="input-field" value="Asfandyar" />
+              </div>
+
+              <div class="form-group">
+                <label for="settingsDefaultTone" class="form-label">Default Generation Tone</label>
+                <select id="settingsDefaultTone" class="select-field">
+                  <option value="Professional" selected>Professional</option>
+                  <option value="Persuasive">Persuasive</option>
+                  <option value="Friendly">Friendly</option>
+                  <option value="Witty">Witty</option>
+                  <option value="Storyteller">Storyteller</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="settingsModel" class="form-label">Default LLM Engine</label>
+                <select id="settingsModel" class="select-field">
+                  <option value="synthora-v3" selected>Synthora Neural Pro v3.4 (Fastest & Highest Quality)</option>
+                  <option value="claude-35">Claude 3.5 Sonnet Integration</option>
+                  <option value="gpt-4o">GPT-4o Multi-Modal Integration</option>
+                </select>
+              </div>
+
+              <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <button class="btn btn-primary btn-sm" onclick="Toast.success('Settings preferences updated!')">
+                  Save Preferences
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="StorageService.resetDefault(); App.init(); Toast.info('Workspace reset to defaults.')">
+                  Reset Mock Workspace
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       3. MODALS (AUTH & GLOBAL QUICK SEARCH)
+       ======================================================================== -->
+  
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="badge badge-purple" style="margin-bottom: 0.5rem;">SECURE ACCESS</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Welcome back to Synthora</h3>
+        <p style="color: var(--text-muted); font-size: 0.875rem;">Enter your credentials to enter your content workspace.</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">Work Email</label>
+          <input type="email" id="loginEmail" class="input-field" placeholder="founder@company.com" required value="asfandyar@company.com" />
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label for="loginPassword" class="form-label" style="margin-bottom: 0;">Password</label>
+            <a href="#" id="linkForgotPassword" style="font-size: 0.75rem; color: var(--primary-400);">Forgot password?</a>
+          </div>
+          <input type="password" id="loginPassword" class="input-field" placeholder="••••••••••••" required value="password123" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Sign In to Studio ✦
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; text-align: center; font-size: 0.875rem; color: var(--text-muted);">
+        Don't have an account? <a href="#" id="switchModalToSignup" style="color: var(--primary-400); font-weight: 600;">Sign up free</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="badge badge-cyan" style="margin-bottom: 0.5rem;">START CREATING</span>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Create your Synthora Account</h3>
+        <p style="color: var(--text-muted); font-size: 0.875rem;">10,000 complimentary words included. No credit card required.</p>
+      </div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="signupName" class="form-label">Full Name</label>
+          <input type="text" id="signupName" class="input-field" placeholder="Asfandyar" required />
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail" class="form-label">Work Email</label>
+          <input type="email" id="signupEmail" class="input-field" placeholder="founder@company.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword" class="form-label">Password</label>
+          <input type="password" id="signupPassword" class="input-field" placeholder="Create a secure password" required />
+        </div>
+
+        <button type="submit" class="btn btn-generate" style="width: 100%; margin-top: 1rem;">
+          Create Free Account ✦
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; text-align: center; font-size: 0.875rem; color: var(--text-muted);">
+        Already have an account? <a href="#" id="switchModalToLogin" style="color: var(--primary-400); font-weight: 600;">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Reset Your Password</h3>
+        <p style="color: var(--text-muted); font-size: 0.875rem;">Enter your email to receive recovery instructions.</p>
+      </div>
+
+      <form id="forgotPasswordForm">
+        <div class="form-group">
+          <label for="forgotEmail" class="form-label">Registered Email</label>
+          <input type="email" id="forgotEmail" class="input-field" placeholder="name@company.com" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Send Recovery Link
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick Search Palette Modal (Cmd+K) -->
+  <div id="quickSearchModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 600px; padding: 1.5rem;">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      
+      <div style="position: relative; margin-bottom: 1rem;">
+        <input type="text" id="globalSearchInput" class="input-field" style="padding-left: 2.5rem; font-size: 1.0625rem;" placeholder="Search tools, templates, or concepts (ESC to exit)..." />
+        <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-dim);">🔍</span>
+      </div>
+
+      <div id="globalSearchResults" style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 380px; overflow-y: auto;">
+        <!-- Filled dynamically by ModalManager.filterQuickSearch -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       4. GLOBAL TOAST CONTAINER
+       ======================================================================== -->
+  <div id="synthoraToastContainer" class="toast-container" aria-live="polite"></div>
+
+
+  <!-- ========================================================================
+       5. JAVASCRIPT SYSTEM INCLUSIONS
+       ======================================================================== -->
+  <script src="storage.js"></script>
+  <script src="ai-engine.js"></script>
+  <script src="templates-data.js"></script>
+  <script src="mock-history.js"></script>
+  <script src="toast.js"></script>
+  <script src="modal.js"></script>
+  <script src="editor.js"></script>
+  <script src="landing.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
